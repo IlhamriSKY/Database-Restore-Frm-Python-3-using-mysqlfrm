@@ -9,5 +9,6 @@ Simple script created to run the mysqlfrm process, saved as a clean .sql file ea
 - Run app.py
 
 # TODO
+- Marge all .sql to one .sql files
 - Copy ibd files
 - Run Alter
