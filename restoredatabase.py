@@ -2,7 +2,7 @@ import os
 
 class restore(object):
     def __init__(self):
-        self.file = (.frm and .ibd folder path ex C:\\database\\)
+        self.file = ('.frm and .ibd folder path ex C:\\database\\') #directory location must be inside single quotes
         self.fileoutput = self.file+"output\\"
         self.listdir = os.listdir(self.file)
         self.listdiroutput = os.listdir(self.fileoutput)
@@ -12,7 +12,7 @@ class restore(object):
         for i in pathfile:
             if ".frm" in i:
                 # Change user and password mysql that running at your machine
-                os.system('mysqlfrm --server=root:password@localhost --port=3311 '+self.file+str(i)+' > 'self.fileoutput+str(i.replace(".frm",""))+'.sql')
+                os.system('mysqlfrm --server=root:password@localhost --port=3311 '+self.file+str(i)+' > '+self.fileoutput+str(i.replace(".frm",""))+'.sql')
                 print(i)
 
     def delete_list(self, pathfile):
